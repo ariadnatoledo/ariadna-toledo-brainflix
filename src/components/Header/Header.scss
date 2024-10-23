@@ -1,0 +1,84 @@
+@import "../../styles/partials/variables";
+@import "../../styles/partials/mixins";
+@import "../../styles/partials/typography";
+@import "../../styles/partials/global";
+
+.header {
+  font-family: "avenir-regular";
+  background-color: $color-white;
+  color: $color-silver;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: $mobile-padding-after;
+  gap: 16px;
+  &__sitelogo {
+    height: 100%;
+    width: 100%;
+    max-height: 25px;
+    max-width: 120px;
+  }
+  &__wrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    // justify-content: space-between;
+  }
+  &__searchbar {
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    width: 100%;
+    height: 3rem;
+    padding-right: 16px;
+    &-input {
+      width: 100%;
+      background-color: #fafafa;
+      border-radius: 0.25rem;
+      border: 1.5px solid #e1e1e1;
+    }
+    &-input::placeholder {
+      font-family: "avenir-regular";
+      color: $color-brainflix-black;
+    }
+  }
+  &__upload {
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    width: 100%;
+    box-sizing: border-box;
+    &-btn {
+      background-color: $color-brainflix-blue;
+      color: $color-white;
+      font-family: "avenir-demi";
+      height: 3rem;
+      border-radius: 4px;
+      border: none;
+      font-size: 0.8125rem;
+      width: 100%;
+      &:focus {
+        outline-width: 0;
+      }
+      &:hover {
+        background-color: $color-brainflix-darkblack;
+      }
+    }
+    &-item #active {
+      color: $color-brainflix-black;
+      border-bottom: 0.4125rem solid $color-white;
+    }
+  }
+  &__avatar {
+    height: 3rem;
+    width: 3rem;
+    overflow: hidden;
+    border-radius: 50%;
+    &-photo {
+      object-fit: contain;
+      height: 100%;
+      // width: 100%;
+    }
+  }
+}
