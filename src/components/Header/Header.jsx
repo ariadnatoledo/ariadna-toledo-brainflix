@@ -13,8 +13,8 @@ function Header() {
             type="text"
             placeholder="Search"
             name="Searchbar"
-            class="header__searchbar-input"
-          />
+            className="header__searchbar-input"
+          ></input>
         </div>
         <div className="header__avatar">
           <img

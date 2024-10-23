@@ -37,6 +37,11 @@
       background-color: #fafafa;
       border-radius: 0.25rem;
       border: 1.5px solid #e1e1e1;
+      background-image: url("../../assets/icons/search.svg");
+      background-position: 10px 10px;
+      background-repeat: no-repeat;
+      padding: 12px 20px 12px 40px;
+      width: 100%;
     }
     &-input::placeholder {
       font-family: "avenir-regular";
@@ -50,6 +55,11 @@
     width: 100%;
     box-sizing: border-box;
     &-btn {
+      background-image: url("../../assets/icons/upload.svg");
+      background-position: 10px 10px;
+      background-repeat: no-repeat;
+      padding: 12px 20px 12px 40px;
+      width: 100%;
       background-color: $color-brainflix-blue;
       color: $color-white;
       font-family: "avenir-demi";
