@@ -13,11 +13,18 @@ function App() {
     setCurrentVideo(video);
   };
 
+  const handleAddComment = (newComment) => {
+    setCurrentVideo(prevVideo => ({
+      ...prevVideo,
+      comments: [newComment, ...prevVideo.comments]
+    }));
+  };
+
   return (
     <>
       <Header logo="BrainFlix"/>
       <Hero video={currentVideo} />
-      <Comments video={currentVideo} />
+      <Comments video={currentVideo} onAddComment={handleAddComment} />
       <VideoList 
         videos={VideoDetails.filter(video => video.id !== currentVideo.id)} 
         onVideoSelect={handleVideoSelect}
@@ -26,4 +33,32 @@ function App() {
   )
 }
 
-export default App
+export default App;
+
+
+
+
+
+
+
+// function App() {
+//   const [currentVideo, setCurrentVideo] = useState(VideoDetails[0]);
+
+//   const handleVideoSelect = (video) => {
+//     setCurrentVideo(video);
+//   };
+
+//   return (
+//     <>
+//       <Header logo="BrainFlix"/>
+//       <Hero video={currentVideo} />
+//       <Comments video={currentVideo} />
+//       <VideoList 
+//         videos={VideoDetails.filter(video => video.id !== currentVideo.id)} 
+//         onVideoSelect={handleVideoSelect}
+//       />
+//     </>
+//   )
+// }
+
+// export default App

@@ -1,39 +1,34 @@
-import videoPreview from "../../assets/images/Upload-video-preview.jpg"
+import React from 'react';
+import './Hero.scss'; 
 
 function Hero({ video }) {
+  if (!video) {
+    return <div>Loading...</div>; // Or any other loading state
+  }
+
   return (
     <div className="hero">
-<video src={video.video}></video>     
+      <div className="hero__video-container">
+        <video 
+          className="hero__video"
+          src={video.video} 
+          poster={video.image}
+          controls
+          width="100%"
+        >
+          Your browser does not support the video tag.
+        </video>
+      </div>
 
-{/* To add poster (thumbnail) and connect "Next Videos" to display onClick */}
-{/* To add width: 100% - Don't forget */}
-
- <h1>{video.title}</h1>
-      <p>{video.channel}</p>
-      <p>{new Date(video.timestamp).toLocaleDateString()}</p>
-      <p>Views: {video.views}</p>
-      <p>Likes: {video.likes}</p>
+      <div className="hero__details">
+        <h1 className="hero__title">{video.title}</h1>
+        <p className="hero__channel">Channel: {video.channel}</p>
+        <p className="hero__date">Date: {new Date(video.timestamp).toLocaleDateString()}</p>
+        <p className="hero__views">Views: {video.views}</p>
+        <p className="hero__likes">Likes: {video.likes}</p>
+      </div>
     </div>
   );
 }
+
 export default Hero;
-
-{
-  /* //Separating comments */
-}
-
-//       <p>{video.description}</p>
-//       <h2> 3 Comments</h2>
-//       {video.comments.map((comment) => (
-//         <div key={comment.id}>
-//           <p>{comment.name}</p>
-//           <p>{comment.comment}</p>
-//         </div>
-//       ))}
-//     </div>
-//   );
-// }
-
-// export default Hero;
-
-// NOTE: Separate my hero from my comments, description and videos.
