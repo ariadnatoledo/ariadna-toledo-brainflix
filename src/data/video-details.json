@@ -8,7 +8,7 @@
       "views": "980,544",
       "likes": "22,479",
       "duration": "4:01",
-      "video": "https://unit-3-project-api-0a5620414506.herokuapp.com/stream",
+      "video": "https://unit-3-project-api-0a5620414506.herokuapp.com/stream/?api_key=ariadna",
       "timestamp": 1691471862000,
       "comments": [
         {
