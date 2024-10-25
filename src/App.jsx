@@ -34,31 +34,3 @@ function App() {
 }
 
 export default App;
-
-
-
-
-
-
-
-// function App() {
-//   const [currentVideo, setCurrentVideo] = useState(VideoDetails[0]);
-
-//   const handleVideoSelect = (video) => {
-//     setCurrentVideo(video);
-//   };
-
-//   return (
-//     <>
-//       <Header logo="BrainFlix"/>
-//       <Hero video={currentVideo} />
-//       <Comments video={currentVideo} />
-//       <VideoList 
-//         videos={VideoDetails.filter(video => video.id !== currentVideo.id)} 
-//         onVideoSelect={handleVideoSelect}
-//       />
-//     </>
-//   )
-// }
-
-// export default App
