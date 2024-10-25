@@ -1,10 +1,13 @@
-import { useState } from 'react';
-import './App.scss'
-import Header from './components/Header/Header';
-import Hero from './components/Hero/Hero';
-import Comments from './components/Comments/Comments';
-import VideoList from './components/VideoList/VideoList';
-import VideoDetails from './data/video-details.json';
+import { useState } from "react";
+import "./App.scss";
+import Header from "./components/Header/Header";
+import Hero from "./components/Hero/Hero";
+import HeroStats from "./components/HeroStats/HeroStats";
+import HeroDescription from "./components/HeroDescription/HeroDescription";
+import CommentForm from "./components/CommentForm/CommentForm";
+import Comments from "./components/Comments/Comments";
+import VideoList from "./components/VideoList/VideoList";
+import VideoDetails from "./data/video-details.json";
 
 function App() {
   const [currentVideo, setCurrentVideo] = useState(VideoDetails[0]);
@@ -14,23 +17,26 @@ function App() {
   };
 
   const handleAddComment = (newComment) => {
-    setCurrentVideo(prevVideo => ({
+    setCurrentVideo((prevVideo) => ({
       ...prevVideo,
-      comments: [newComment, ...prevVideo.comments]
+      comments: [{ id: Date.now(), ...newComment }, ...prevVideo.comments],
     }));
   };
 
   return (
     <>
-      <Header logo="BrainFlix"/>
+      <Header logo="BrainFlix" />
       <Hero video={currentVideo} />
-      <Comments video={currentVideo} onAddComment={handleAddComment} />
-      <VideoList 
-        videos={VideoDetails.filter(video => video.id !== currentVideo.id)} 
+      <HeroStats video={currentVideo} />
+      <HeroDescription video={currentVideo} />
+      <CommentForm onAddComment={handleAddComment} />
+      <Comments video={currentVideo} />
+      <VideoList
+        videos={VideoDetails.filter((video) => video.id !== currentVideo.id)}
         onVideoSelect={handleVideoSelect}
       />
     </>
-  )
+  );
 }
 
 export default App;

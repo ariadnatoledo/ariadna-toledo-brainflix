@@ -34,34 +34,6 @@ function Comments({ video, onAddComment }) {
 
   return (
     <div className="comments">
-      <p>{video.description}</p>
-      <h2>{video.comments.length} Comments</h2>
-
-      <form onSubmit={handleSubmit} className="comments__form">
-        <h2>Join the Conversation</h2>
-        <div className="comments__form-content">
-          <img src={avatarSvg} alt="Your Avatar" className="comments__avatar" />
-          <div className="comments__input-group">
-            <input
-              type="text"
-              value={name}
-              onChange={(e) => setName(e.target.value)}
-              placeholder="Your Name"
-              className="comments__input"
-            />
-            <textarea
-              value={comment}
-              onChange={(e) => setComment(e.target.value)}
-              placeholder="Add a new comment"
-              className="comments__textarea"
-            />
-            <button type="submit" className="comments__submit">
-              Submit
-            </button>
-          </div>
-        </div>
-      </form>
-
       {video.comments.map((comment) => (
         <div key={comment.id} className="comment">
           <img
@@ -89,4 +61,3 @@ function Comments({ video, onAddComment }) {
 }
 
 export default Comments;
-
