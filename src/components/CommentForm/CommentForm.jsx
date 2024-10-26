@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import avatarSvg from "../../assets/images/Mohan-muruge.jpg";
+import "./CommentForm.scss";
 
 function CommentForm({ onAddComment }) {
   const [name, setName] = useState("");
@@ -19,8 +20,8 @@ function CommentForm({ onAddComment }) {
   };
 
   return (
-    <div className="comments__form-container">
-      <form onSubmit={handleSubmit} className="comments__form">
+    <div className="comments__form">
+      <form onSubmit={handleSubmit} className="comments__form-container">
         <h2>Join the Conversation</h2>
         <div className="comments__form-content">
           <img src={avatarSvg} alt="Your Avatar" className="comments__avatar" />

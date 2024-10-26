@@ -1,5 +1,12 @@
+@import "../../styles/partials/variables";
+@import "../../styles/partials/mixins";
+@import "../../styles/partials/typography";
+@import "../../styles/partials/global";
+
+
 .video-list {
     // Styles for the container
+    font-family: "avenir-regular";
     margin-right: 16px;
     margin-left: 16px;
   
@@ -33,6 +40,6 @@
     &__channel {
       // Styles for the channel name
       font-size: 12px;
-      color: #666;
+      color: $color-brainflix-black;
     }
   }

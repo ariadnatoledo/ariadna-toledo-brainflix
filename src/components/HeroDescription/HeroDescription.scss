@@ -1,0 +1,14 @@
+@import "../../styles/partials/variables";
+@import "../../styles/partials/mixins";
+@import "../../styles/partials/typography";
+@import "../../styles/partials/global";
+
+
+.herodescription {
+    display: flex;
+    flex-direction: column;
+    font-family: "avenir-regular";
+    font-size: 0.8125rem;
+    line-height: 1.125rem;
+    padding-top: 1.5rem
+}

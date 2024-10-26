@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import avatarSvg from "../../assets/images/Mohan-muruge.jpg";
-import "../Comments/Comments.scss";
+import "./Comments.scss";
 
 function Comments({ video, onAddComment }) {
   const [name, setName] = useState("");
@@ -33,9 +33,9 @@ function Comments({ video, onAddComment }) {
   };
 
   return (
-    <div className="comments">
+    <div className="comment">
       {video.comments.map((comment) => (
-        <div key={comment.id} className="comment">
+        <div key={comment.id} className="comment__wrapper">
           <img
             src={avatarSvg}
             alt={`${comment.name}'s Avatar`}
