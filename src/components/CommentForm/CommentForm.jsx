@@ -20,9 +20,9 @@ function CommentForm({ onAddComment }) {
   };
 
   return (
-    <div className="comments__form">
-      <form onSubmit={handleSubmit} className="comments__form-container">
-        <h2>Join the Conversation</h2>
+    <div className="comments__form-container">
+      <form onSubmit={handleSubmit} className="comments__form">
+        <h2 className="comments__heading">JOIN THE CONVERSATION</h2>
         <div className="comments__form-content">
           <img src={avatarSvg} alt="Your Avatar" className="comments__avatar" />
           <div className="comments__input-group">
@@ -40,7 +40,7 @@ function CommentForm({ onAddComment }) {
               className="comments__textarea"
             />
             <button type="submit" className="comments__submit">
-              Submit
+              COMMENT
             </button>
           </div>
         </div>

@@ -9,7 +9,16 @@
     font-family: "avenir-regular";
     margin-right: 16px;
     margin-left: 16px;
-  
+  &__wrapper {
+    display: flex;
+  }
+  &__header {
+    font-size: 13px;
+    height: 18px;
+    font-family: avenir-demi;
+    padding: 24px 16px 16px 0px;
+    margin-bottom: 16px;
+  }
     &__item {
       // Styles for each video item
       display: flex;
@@ -21,7 +30,7 @@
       width: 120px;
       height: 70px;
       object-fit: cover;
-      border-radius: 5px;
+      border-radius: 4px;
       margin-right: 16px;
     }
   
@@ -29,17 +38,21 @@
       // Styles for the text content
       display: flex;
       flex-direction: column;
+      justify-content: space-between;
     }
   
     &__title {
       // Styles for the video title
-      font-size: 14px;
-      margin-bottom: 8px;
+      font-size: 13px;
+      height: 18px;
+      font-family: avenir-bold;
+      // margin-bottom: 8px;
     }
   
     &__channel {
       // Styles for the channel name
-      font-size: 12px;
-      color: $color-brainflix-black;
+      font-size: 13px;
+      height: 18px;
+      font-family: avenir-regular;
     }
   }

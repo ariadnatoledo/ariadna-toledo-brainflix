@@ -3,7 +3,9 @@ import './VideoList.scss';
 function VideoList({ videos, onVideoSelect }) {
     return (
       <div className="video-list">
-        <h2 className="video-list__header">Next Videos</h2>
+        <div className="video-list__wrapper">
+        <h2 className="video-list__header">NEXT VIDEOS</h2>
+        </div>
         {videos.map(video => (
           <div key={video.id} className="video-list__item" onClick={() => onVideoSelect(video)}>
             <img className="video-list__image" src={video.image} alt={video.title} />

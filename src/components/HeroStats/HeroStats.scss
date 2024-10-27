@@ -4,29 +4,41 @@
 @import "../../styles/partials/global";
 
 .herostats {
-  font-family: "avenir-regular";
   display: flex;
   flex-direction: column;
+  font-family: "avenir-regular";
+  padding: 24px 16px 16px;
   &__title {
-    font-size: 1.5rem;
-    padding-top: 2rem;
-    line-height: 2rem;
+    font-size: 24px;
+    line-height: 32px;
+    font-family: avenir-bold;
     border-bottom: 1px solid $color-mercury;
   }
   &__container {
     display: flex;
     justify-content: space-between;
     border-bottom: 1px solid $color-mercury;
-
+    padding-top: 16px;
   }
   &__channel {
+    font-size: 13px;
+    line-height: 18px;
     display: flex;
     flex-direction: column;
+    gap: 16px;
+    &-name {
+      font-family: avenir-bold;
+    }
+    &-date {
+      color: $color-silver;
+    }
   }
   &__section {
+    font-size: 13px;
+    line-height: 18px;
+    color: $color-silver;
     display: flex;
     flex-direction: column;
+    gap: 16px;
   }
 }
-
-

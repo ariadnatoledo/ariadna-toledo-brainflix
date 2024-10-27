@@ -8,7 +8,7 @@ function HeroDescription({ video }) {
       <p>{video.description}</p>
       </div>
       <div className="herodescription__length">
-      <h2>{video.comments.length} Comments</h2>
+      <h3>{video.comments.length} Comments</h3>
       </div>
     </div>
   );
