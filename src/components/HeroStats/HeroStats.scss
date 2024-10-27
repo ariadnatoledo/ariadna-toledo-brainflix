@@ -13,12 +13,23 @@
     line-height: 32px;
     font-family: avenir-bold;
     border-bottom: 1px solid $color-mercury;
+    padding-bottom: 16px;
   }
   &__container {
     display: flex;
-    justify-content: space-between;
     border-bottom: 1px solid $color-mercury;
     padding-top: 16px;
+    padding-bottom: 16px;
+    gap: 100px;
+
+    &-views {
+      display: flex;
+      gap: 16px;
+    }
+    &-likes {
+      display: flex;
+      gap: 16px;
+    }
   }
   &__channel {
     font-size: 13px;

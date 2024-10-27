@@ -8,15 +8,25 @@ function CommentForm({ onAddComment }) {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    if (name.trim() && comment.trim()) {
-      onAddComment({
-        name: name.trim(),
-        comment: comment.trim(),
-        timestamp: new Date().toISOString(),
-      });
-      setName("");
-      setComment("");
+
+    if (name.trim() === "") {
+      alert("Don't forget to enter your name.");
+      return;
     }
+
+    if (comment.trim() === "") {
+      alert("Leave a cool comment!");
+      return;
+    }
+
+    onAddComment({
+      name: name.trim(),
+      comment: comment.trim(),
+      timestamp: new Date().toISOString(),
+    });
+
+    setName("");
+    setComment("");
   };
 
   return (

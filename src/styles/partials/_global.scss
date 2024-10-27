@@ -1,26 +1,24 @@
 * {
-    margin: 0;
-    padding: 0;
-  }
-  
-  html,
-  body {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-  }
+  margin: 0;
+  padding: 0;
+}
 
-  h2 {
-    font-size: 13px;
-    line-height: 18px;
-    font-family: avenir-bold;
-    color: $color-silver;
-  }
+html,
+body {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 
-  h3 {
-    // font-size: 13px;
-    // line-height: 18px;
-    // padding: 16px 16px;
+h2 {
+  font-size: 13px;
+  line-height: 18px;
+  font-family: avenir-bold;
+  color: $color-silver;
+}
 
-    }
-  
+h3 {
+  // font-size: 13px;
+  // line-height: 18px;
+  // padding: 16px 16px;
+}

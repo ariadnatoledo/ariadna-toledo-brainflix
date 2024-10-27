@@ -3,20 +3,19 @@
 @import "../../styles/partials/typography";
 @import "../../styles/partials/global";
 
-
 .herodescription {
-    display: flex;
-    flex-direction: column;
-    font-family: "avenir-regular";
+  display: flex;
+  flex-direction: column;
+  font-family: "avenir-regular";
+  font-size: 13px;
+  line-height: 18px;
+  &__subdescription {
+    padding: 0px 16px 24px;
+  }
+  &__length {
     font-size: 13px;
+    font-family: avenir-bold;
     line-height: 18px;
-    &__subdescription {
-        padding: 0px 16px 16px;
-    }
-    &__length {
-        font-size: 13px;
-        font-family: avenir-bold;
-    line-height: 18px;
-    padding: 0px 16px 16px;
-    }
+    padding: 0px 16px 24px;
+  }
 }

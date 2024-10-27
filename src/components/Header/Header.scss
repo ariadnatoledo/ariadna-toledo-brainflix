@@ -30,7 +30,6 @@
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
-
   }
   &__searchbar {
     display: flex;
@@ -39,6 +38,7 @@
     width: 100%;
     height: 3rem;
     padding-right: 16px;
+
     &-input {
       width: 100%;
       background-color: #fafafa;
@@ -49,10 +49,10 @@
       background-repeat: no-repeat;
       padding: 12px 20px 12px 40px;
       width: 100%;
-    }
-    &-input::placeholder {
-      font-family: "avenir-regular";
-      color: $color-brainflix-black;
+      &:focus {
+        border: 2px solid $color-brainflix-blue;
+        outline: none;
+      }
     }
   }
   &__upload {
@@ -70,16 +70,16 @@
       background-color: $color-brainflix-blue;
       color: $color-white;
       font-family: "avenir-demi";
-      height: 3rem;
+      height: 40px;
       border-radius: 4px;
       border: none;
-      font-size: 0.8125rem;
+      font-size: 13px;
       width: 100%;
       &:focus {
         outline-width: 0;
       }
       &:hover {
-        background-color: $color-brainflix-darkblack;
+        background-color: $color-brainflix-darkblue;
       }
     }
     &-item #active {
@@ -96,9 +96,11 @@
       display: none;
     }
     &-photo {
-      object-fit: contain;
-      height: 100%;
-      // width: 100%;
+      width: 45px;
+      height: 45px;
+      border-radius: 50%;
+      margin-right: 1rem;
+      object-fit: cover;
     }
   }
 }
@@ -109,26 +111,26 @@
     padding: $tablet-padding;
     flex-direction: row;
     &__nav {
-        display: flex;
-        flex-direction: row;
-        gap: 0px;
+      display: flex;
+      flex-direction: row;
+      gap: 0px;
     }
-   
+
     &__searchbar {
-        display: flex;
-        align-self: center;
-        width: 50%;
-        height: 3rem;
-        padding-right: 0px;
+      display: flex;
+      align-self: center;
+      width: 50%;
+      height: 3rem;
+      padding-right: 0px;
     }
     &__upload {
-        display: flex;
-        justify-content: center;
-        align-self: center;
-        width: 50%;
-        box-sizing: border-box;
-        gap:24px;
-      }
+      display: flex;
+      justify-content: center;
+      align-self: center;
+      width: 50%;
+      box-sizing: border-box;
+      gap: 24px;
+    }
 
     &__avatar-mobile {
       display: none;
@@ -137,31 +139,28 @@
       display: flex;
     }
   }
-  
 }
 
 @include desktop {
-    .header {
+  .header {
+    display: flex;
+    padding: $desktop-padding;
+    flex-direction: row;
+    &__searchbar {
       display: flex;
-      padding: $desktop-padding;
-      flex-direction: row;
-      &__searchbar {
-        display: flex;
-        align-self: center;
-        width: 50%;
-        align-self: flex-end;
-        height: 3rem;
-        padding-right: 0px;
+      align-self: center;
+      width: 50%;
+      align-self: flex-end;
+      height: 3rem;
+      padding-right: 0px;
     }
-      &__upload {
-        display: flex;
-        justify-content: center;
-        align-self: center;
-        width: 50%;
-                align-self: flex-end;
-                box-sizing: border-box;
-      }
+    &__upload {
+      display: flex;
+      justify-content: center;
+      align-self: center;
+      width: 50%;
+      align-self: flex-end;
+      box-sizing: border-box;
     }
-    
   }
-  
+}

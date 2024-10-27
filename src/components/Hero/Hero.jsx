@@ -1,6 +1,9 @@
+import React from "react";
+import "./Hero.scss";
+
 function Hero({ video }) {
   if (!video) {
-    return <div>Loading...</div>; // Or any other loading state
+    return <div className="hero">Loading...</div>;
   }
 
   return (
@@ -11,7 +14,7 @@ function Hero({ video }) {
           src={video.video}
           poster={video.image}
           controls
-          width="100%"
+          playsInline
         >
           Your browser does not support the video tag.
         </video>
