@@ -27,14 +27,20 @@ function App() {
     <>
       <Header logo="BrainFlix" />
       <Hero video={currentVideo} />
-      <HeroStats video={currentVideo} />
-      <HeroDescription video={currentVideo} />
-      <CommentForm onAddComment={handleAddComment} />
-      <Comments video={currentVideo} />
-      <VideoList
-        videos={VideoDetails.filter((video) => video.id !== currentVideo.id)}
-        onVideoSelect={handleVideoSelect}
-      />
+      <section className="maincontainer">
+        <div>
+          <HeroStats video={currentVideo} />
+          <HeroDescription video={currentVideo} />
+          <CommentForm onAddComment={handleAddComment} />
+          <Comments video={currentVideo} />
+        </div>
+        <div className="maincontainer__two">
+          <VideoList
+            videos={VideoDetails.filter((video) => video.id !== currentVideo.id)}
+            onVideoSelect={handleVideoSelect}
+          />
+        </div>
+      </section>
     </>
   );
 }
