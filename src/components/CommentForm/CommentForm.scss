@@ -107,3 +107,29 @@
     }
   }
 }
+
+@include tablet {
+  .comments {
+    width: 100%;
+    min-height: 36px;
+   &__heading {
+    font-size: 14px;
+    line-height: 22px;
+   }
+   &__input, &__textarea {
+    width: 100%;
+    height: 40px;
+    margin-bottom: 24px;
+   }
+   
+  &__input-group {
+    display: flex;
+    flex-direction: row;
+    gap: 24px
+  }
+  &__submit {
+    width: 30rem;
+  }
+  }
+ 
+}

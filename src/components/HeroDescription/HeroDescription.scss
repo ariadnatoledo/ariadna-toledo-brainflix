@@ -19,3 +19,18 @@
     padding: 0px 16px 24px;
   }
 }
+
+@include tablet {
+  .herodescription {
+  font-size: 14px;
+  line-height: 22px;
+  font-family: avenir-regular;
+  &__subdescription {
+    padding: 0 24px 36px;
+  }
+  &__length {
+    font-size: 14px;
+    padding: 0 24px 36px;
+  }
+}
+}

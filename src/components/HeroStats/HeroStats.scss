@@ -53,3 +53,41 @@
     gap: 16px;
   }
 }
+
+@include tablet {
+  .herostats {
+    padding: 36px 24px 24px;
+    &__title {
+      font-size: 33px;
+      line-height: 44px;
+      font-family: avenir-bold;
+      border-bottom: none;
+      padding-bottom: 24px;
+    }
+    &__container {
+      display: flex;
+      justify-content: space-between;
+      border-bottom: 1px solid $color-mercury;
+      padding: 0;
+      padding-bottom: 10px;
+      gap: 0;
+    }
+    &__channel{
+      display: flex;
+      flex-direction: row;
+      gap: 36px;
+      &-name {
+        font-size: 14px;
+        line-height: 20px;
+      }
+
+    }
+    &__section {
+      display: flex;
+      flex-direction: row;
+      gap: 36px;
+
+    }
+  }
+  
+}

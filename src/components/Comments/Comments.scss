@@ -42,17 +42,44 @@
 
   &__name {
     font-size: 13px;
-    height: 18px;
+    line-height: 18px;
     font-family: avenir-bold;
   }
 
   &__timestamp {
     font-size: 0.8rem;
+    line-height: 18px;
     color: $color-silver;
   }
 
   &__text {
     font-size: 13px;
+    line-height: 18px;
     font-family: avenir-regular;
+  }
+}
+
+@include tablet {
+  .comment {
+    padding: 0 24px;
+    &__wrapper {
+      padding: 24px 0;
+    }
+    &__name {
+      font-size: 14px;
+      height: 22px;
+      font-family: avenir-bold;
+    }
+
+    &__timestamp {
+      font-size: 14px;
+      line-height: 22px;
+      color: $color-silver;
+    }
+
+    &__text {
+      font-size: 14px;
+      font-family: avenir-regular;
+    }
   }
 }
