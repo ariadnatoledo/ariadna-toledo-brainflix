@@ -36,7 +36,7 @@
     justify-content: center;
     align-self: center;
     width: 100%;
-    height: 3rem;
+    height: 40px;
     padding-right: 16px;
 
     &-input {
@@ -88,8 +88,8 @@
     }
   }
   &__avatar {
-    height: 3rem;
-    width: 3rem;
+    // height: 3rem;
+    // width: 3rem;
     overflow: hidden;
     border-radius: 50%;
     &-tablet {
@@ -110,33 +110,54 @@
     display: flex;
     padding: $tablet-padding;
     flex-direction: row;
+    height: 5rem;
+
+    &__sitelogo {
+      margin: 1rem 0;
+      // padding-right: 169px;
+    }
+
     &__nav {
       display: flex;
       flex-direction: row;
-      gap: 0px;
+      justify-content: flex-end;
+      gap: 0;
+      align-items: center;
+    }
+
+    &__wrapper {
+      width: auto;
     }
 
     &__searchbar {
-      display: flex;
-      align-self: center;
-      width: 50%;
-      height: 3rem;
-      padding-right: 0px;
-    }
-    &__upload {
-      display: flex;
-      justify-content: center;
-      align-self: center;
-      width: 50%;
-      box-sizing: border-box;
-      gap: 24px;
+      width: 20rem;
+      height: 40px;
+      padding-right: 24px;
     }
 
-    &__avatar-mobile {
-      display: none;
+    &__upload {
+      width: 16rem;
+      gap: 24px;
+
+      &-btn {
+        // width: 5.9375rem;
+      }
     }
-    &__avatar-tablet {
-      display: flex;
+
+    &__avatar {
+      &-mobile {
+        display: none;
+      }
+      &-tablet {
+        display: flex;
+      }
+      &-photo {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        margin-right: 1rem;
+        object-fit: cover;
+      }
     }
   }
 }
@@ -146,21 +167,52 @@
     display: flex;
     padding: $desktop-padding;
     flex-direction: row;
-    &__searchbar {
-      display: flex;
-      align-self: center;
-      width: 50%;
-      align-self: flex-end;
-      height: 3rem;
-      padding-right: 0px;
+    height: 5rem;
+
+    &__sitelogo {
+      margin: 1rem 0;
     }
-    &__upload {
+
+    &__nav {
       display: flex;
-      justify-content: center;
-      align-self: center;
-      width: 50%;
-      align-self: flex-end;
-      box-sizing: border-box;
+      flex-direction: row;
+      justify-content: flex-end;
+      gap: 0;
+      align-items: center;
+    }
+
+    &__wrapper {
+      width: auto;
+    }
+
+    &__searchbar {
+      width: 20rem;
+      height: 40px;
+      padding-right: 24px;
+    }
+
+    &__upload {
+      width: 16rem;
+      gap: 24px;
+
+      &-btn {
+      }
+    }
+
+    &__avatar {
+      &-mobile {
+        display: none;
+      }
+      &-tablet {
+        display: flex;
+      }
+      &-photo {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        margin-right: 1rem;
+        object-fit: cover;
+      }
     }
   }
 }
