@@ -17,8 +17,11 @@ h2 {
   color: $color-silver;
 }
 
-h3 {
-  // font-size: 13px;
-  // line-height: 18px;
-  // padding: 16px 16px;
-}
+// @include desktop {
+//   .all-components__main {
+//     display: flex;
+//   }
+//   .all-components__two {
+//     border-left: 1px solid color-mercury;
+//   }
+// }

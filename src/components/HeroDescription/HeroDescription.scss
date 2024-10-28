@@ -34,3 +34,17 @@
   }
 }
 }
+
+@include desktop {
+  .herodescription {
+    font-size: 14px;
+  line-height: 22px;
+  font-family: avenir-regular;
+  &__subdescription {
+    padding: 0 160px 36px;
+  }
+  &__length {
+    padding: 0 160px 36px;
+  }
+  }
+}

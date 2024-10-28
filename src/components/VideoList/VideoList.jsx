@@ -1,4 +1,5 @@
-import "./VideoList.scss";
+ import React from "react";
+ import "./VideoList.scss";
 
 function VideoList({ videos, onVideoSelect }) {
   return (

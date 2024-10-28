@@ -3,8 +3,8 @@
 @import "../../styles/partials/typography";
 @import "../../styles/partials/global";
 
+
 .video-list {
-  // Styles for the container
   font-family: "avenir-regular";
   margin-right: 16px;
   margin-left: 16px;
@@ -19,13 +19,11 @@
     margin-bottom: 16px;
   }
   &__item {
-    // Styles for each video item
     display: flex;
     margin-bottom: 16px;
   }
 
   &__image {
-    // Styles for the image
     width: 120px;
     height: 70px;
     object-fit: cover;
@@ -34,22 +32,18 @@
   }
 
   &__details {
-    // Styles for the text content
     display: flex;
     flex-direction: column;
     justify-content: space-between;
   }
 
   &__title {
-    // Styles for the video title
     font-size: 13px;
     height: 18px;
     font-family: avenir-bold;
-    // margin-bottom: 8px;
   }
 
   &__channel {
-    // Styles for the channel name
     font-size: 13px;
     height: 18px;
     font-family: avenir-regular;
@@ -72,9 +66,8 @@
       font-size: 14px;
       height: 22px;
       font-family: avenir-bold;
-      // margin-bottom: 8px;
     }
-  
+
     &__channel {
       font-size: 14px;
       height: 22px;
@@ -82,3 +75,10 @@
     }
   }
 }
+
+@include desktop {
+  .video-list {
+     
+    }
+  }
+

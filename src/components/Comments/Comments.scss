@@ -83,3 +83,9 @@
     }
   }
 }
+
+@include desktop {
+  .comment {
+    padding: 0 160px;
+  }
+}
