@@ -36,7 +36,9 @@ function App() {
         </div>
         <div className="maincontainer__two">
           <VideoList
-            videos={VideoDetails.filter((video) => video.id !== currentVideo.id)}
+            videos={VideoDetails.filter(
+              (video) => video.id !== currentVideo.id
+            )}
             onVideoSelect={handleVideoSelect}
           />
         </div>

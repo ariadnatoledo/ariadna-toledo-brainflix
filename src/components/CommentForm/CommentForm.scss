@@ -5,12 +5,12 @@
 
 .comments {
   width: 100%;
-  min-height: 36px;
+  min-height: 2.25rem;
 
   &__form-container {
     display: flex;
     flex-direction: column;
-    padding: 0 24px;
+    padding: 0 1.5rem;
     box-sizing: border-box;
     width: 100%;
   }
@@ -18,16 +18,16 @@
   &__heading {
     display: flex;
     font-family: "avenir-demi";
-    font-size: 13px;
+    font-size: 0.8125rem;
     color: $color-silver;
-    padding-left: 56px;
-    padding-bottom: 12px;
+    padding-left: 3.5rem;
+    padding-bottom: 0.75rem;
   }
 
   &__form {
     display: flex;
     flex-direction: column;
-    border-bottom: 1px solid $color-mercury;
+    border-bottom: 0.0625rem solid $color-mercury;
     font-family: "avenir-regular";
     width: 100%;
   }
@@ -36,13 +36,12 @@
     display: flex;
     align-items: flex-start;
     justify-content: left;
-    // padding-bottom: 2rem;
     width: 100%;
   }
 
   &__avatar {
-    width: 40px;
-    height: 40px;
+    width: 2.5rem;
+    height: 2.5rem;
     border-radius: 50%;
     margin-right: 1rem;
     object-fit: cover;
@@ -57,48 +56,46 @@
     width: 100%;
     background-color: $color-alabaster;
     border-radius: 0.25rem;
-    border: 1px solid $color-mercury;
-    // padding: 0.625rem;
+    border: 0.0625rem solid $color-mercury;
     font-family: "avenir-regular";
     font-size: 0.8125rem;
     line-height: 1.125rem;
-    margin-bottom: 16px;
+    margin-bottom: 1rem;
     resize: none;
-    padding: 12px;
+    padding: 0.75rem;
     transition: border-color 0.3s ease;
 
     &:focus {
-      border: 2px solid $color-brainflix-blue;
-      outline: none; // Remove default focus outline
+      border: 0.125rem solid $color-brainflix-blue;
+      outline: none;
     }
 
     &.error {
-      border: 1px solid #d22d2d;
+      border: 0.0625rem solid #d22d2d;
     }
   }
 
   &__textarea {
-    height: 100px;
+    height: 6.25rem;
     resize: vertical;
   }
 
   &__submit {
     background-image: url("../../assets/icons/add_comment.svg");
-    background-position: 10px 10px;
+    background-position: 0.625rem 0.625rem;
     background-repeat: no-repeat;
-    padding: 12px 20px 12px 40px;
-    margin-bottom: 16px;
+    padding: 0.75rem 1.25rem 0.75rem 2.5rem;
+    margin-bottom: 1rem;
     width: 100%;
     background-color: $color-brainflix-blue;
     color: $color-white;
     font-family: "avenir-demi";
-    height: 40px;
-    border-radius: 4px;
+    height: 2.5rem;
+    border-radius: 0.25rem;
     border: none;
-    font-size: 13px;
+    font-size: 0.8125rem;
     width: 100%;
-    //Below is the min-width for tablet and desktop, TO ADD!!! Also no less than 32px of padding.
-    // min-width: 150px;
+
     &:focus {
       outline-width: 0;
     }
@@ -111,22 +108,22 @@
 @include tablet {
   .comments {
     width: 100%;
-    min-height: 36px;
+    min-height: 2.25rem;
     &__heading {
-      font-size: 14px;
-      line-height: 22px;
+      font-size: 0.875rem;
+      line-height: 1.375rem;
     }
     &__input,
     &__textarea {
       width: 100%;
-      height: 40px;
-      margin-bottom: 24px;
+      height: 2.5rem;
+      margin-bottom: 1.5rem;
     }
 
     &__input-group {
       display: flex;
       flex-direction: row;
-      gap: 24px;
+      gap: 1.5rem;
     }
     &__submit {
       width: 30rem;
@@ -139,16 +136,15 @@
     &__form-container {
       display: flex;
       flex-direction: column;
-      padding: 0 160px;
+      padding: 0 10rem;
       box-sizing: border-box;
       width: 100%;
-      padding: 0 0px 0px 160px;
+      padding: 0 0 0 10rem;
     }
     &__input-group {
-      margin-right: 24px;
+      margin-right: 1.5rem;
     }
     &__form {
-
     }
   }
 }

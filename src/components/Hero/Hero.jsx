@@ -8,19 +8,19 @@ function Hero({ video }) {
 
   return (
     <div className="maincontainer">
-    <div className="hero">
-      <div className="hero__video-container">
-        <video
-          className="hero__video"
-          src={video.video}
-          poster={video.image}
-          controls
-          playsInline
-        >
-          Your browser does not support the video tag.
-        </video>
+      <div className="hero">
+        <div className="hero__video-container">
+          <video
+            className="hero__video"
+            src={video.video}
+            poster={video.image}
+            controls
+            playsInline
+          >
+            Your browser does not support the video tag.
+          </video>
+        </div>
       </div>
-    </div>
     </div>
   );
 }

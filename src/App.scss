@@ -12,8 +12,9 @@
   @include desktop {
     display: flex;
   }
+
   .maincontainer__two {
     width: 100%;
-    border-left: 1px solid $color-mercury;
+    border-left: 0.0625rem solid $color-mercury;
   }
 }

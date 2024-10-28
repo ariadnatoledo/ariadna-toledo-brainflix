@@ -7,94 +7,107 @@
   display: flex;
   flex-direction: column;
   font-family: "avenir-regular";
-  padding: 24px 16px 16px;
+  padding: 1.5rem 1rem 1rem;
+
   &__title {
-    font-size: 24px;
-    line-height: 32px;
+    font-size: 1.5rem;
+    line-height: 2rem;
     font-family: avenir-bold;
     border-bottom: 1px solid $color-mercury;
-    padding-bottom: 16px;
+    padding-bottom: 1rem;
   }
+
   &__container {
     display: flex;
     border-bottom: 1px solid $color-mercury;
-    padding-top: 16px;
-    padding-bottom: 16px;
-    gap: 100px;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    gap: 6.25rem;
 
     &-views {
       display: flex;
-      gap: 16px;
+      gap: 1rem;
     }
+
     &-likes {
       display: flex;
-      gap: 16px;
+      gap: 1rem;
     }
   }
+
   &__channel {
-    font-size: 13px;
-    line-height: 18px;
+    font-size: 0.8125rem;
+    line-height: 1.125rem;
     display: flex;
     flex-direction: column;
-    gap: 16px;
+    gap: 1rem;
+
     &-name {
       font-family: avenir-bold;
     }
+
     &-date {
       color: $color-silver;
     }
   }
+
   &__section {
-    font-size: 13px;
-    line-height: 18px;
+    font-size: 0.8125rem;
+    line-height: 1.125rem;
     color: $color-silver;
     display: flex;
     flex-direction: column;
-    gap: 16px;
+    gap: 1rem;
   }
 }
 
 @include tablet {
   .herostats {
-    padding: 36px 24px 24px;
+    padding: 2.25rem 1.5rem 1.5rem;
+
     &__title {
-      font-size: 33px;
-      line-height: 44px;
+      font-size: 2.0625rem;
+      line-height: 2.75rem;
       font-family: avenir-bold;
       border-bottom: none;
-      padding-bottom: 24px;
+      padding-bottom: 1.5rem;
     }
+
     &__container {
       display: flex;
       justify-content: space-between;
       border-bottom: 1px solid $color-mercury;
       padding: 0;
-      padding-bottom: 10px;
+      padding-bottom: 0.625rem;
       gap: 0;
     }
+
     &__channel {
       display: flex;
       flex-direction: row;
-      gap: 36px;
+      gap: 2.25rem;
+
       &-name {
-        font-size: 14px;
-        line-height: 20px;
+        font-size: 0.875rem;
+        line-height: 1.25rem;
       }
     }
+
     &__section {
       display: flex;
       flex-direction: row;
-      gap: 36px;
+      gap: 2.25rem;
     }
   }
 }
 
 @include desktop {
   .herostats {
-    padding: 36px 0px 36px 160px;
+    padding: 2.25rem 0 2.25rem 10rem;
 
     &__container {
-      padding-right: 24px;
+      padding-right: 1.5rem;
     }
   }
 }
+
