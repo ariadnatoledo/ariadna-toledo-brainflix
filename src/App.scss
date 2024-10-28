@@ -11,18 +11,9 @@
 .maincontainer {
   @include desktop {
     display: flex;
-    border-right: 1px solid $color-mercury;
+  }
+  .maincontainer__two {
+    width: 100%;
+    border-left: 1px solid $color-mercury;
   }
 }
-
-.maincontainer__two {
-  border-left: 1px solid $color-mercury;
-
-}
-
-// // @include desktop {
-// //   .maincontainer {
-// //      display: flex;
-
-// //     }
-// //   }

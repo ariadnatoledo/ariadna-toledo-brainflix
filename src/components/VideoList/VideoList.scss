@@ -54,6 +54,7 @@
   .video-list {
     margin-right: 24px;
     margin-left: 24px;
+    // padding: 2.5rem 25rem 0px 1.5rem;
     &__header {
       font-size: 14px;
       line-height: 22px;
@@ -74,6 +75,19 @@
       font-family: avenir-regular;
     }
   }
+}
+
+@include desktop {
+  .video-list {
+    padding: 36px 14rem 0px 0px;
+    &__header {
+      padding: 0px 24px 36px 0px;
+    }
+    &__details {
+      padding: 0;
+    }
+  }
+  
 }
 
 

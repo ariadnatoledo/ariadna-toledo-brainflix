@@ -142,7 +142,13 @@
       padding: 0 160px;
       box-sizing: border-box;
       width: 100%;
-      padding: 0px 420px 36px 160px;
+      padding: 0 0px 0px 160px;
+    }
+    &__input-group {
+      margin-right: 24px;
+    }
+    &__form {
+
     }
   }
 }

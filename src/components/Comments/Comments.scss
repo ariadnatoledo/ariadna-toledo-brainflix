@@ -86,6 +86,11 @@
 
 @include desktop {
   .comment {
-    padding: 0px 420px 36px 160px;
+    padding: 0 0px 36px 160px;
+    margin-right: 36px;
+    &__content {
+      margin: 0 24px 0 0;
+    }
+
   }
 }
