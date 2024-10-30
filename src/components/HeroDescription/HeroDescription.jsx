@@ -1,14 +1,14 @@
 import React from "react";
 import "./HeroDescription.scss";
 
-function HeroDescription({ video }) {
+function HeroDescription({ description }) {
   return (
     <div className="herodescription">
       <div className="herodescription__subdescription">
-        <p>{video.description}</p>
+        <p>{description.description}</p>
       </div>
       <div className="herodescription__length">
-        <h3>{video.comments.length} Comments</h3>
+        <h3>{description.comments.length} Comments</h3>
       </div>
     </div>
   );

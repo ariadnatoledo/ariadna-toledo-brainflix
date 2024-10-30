@@ -1,8 +1,8 @@
 import React from "react";
 import "./Hero.scss";
 
-function Hero({ video }) {
-  if (!video) {
+function Hero({ poster }) {
+  if (!poster) {
     return <div className="hero">Loading...</div>;
   }
 
@@ -12,8 +12,8 @@ function Hero({ video }) {
         <div className="hero__video-container">
           <video
             className="hero__video"
-            src={video.video}
-            poster={video.image}
+            src={poster.video}
+            poster={poster.image}
             controls
             playsInline
           >

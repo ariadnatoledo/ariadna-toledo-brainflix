@@ -4,15 +4,15 @@ import "./HeroStats.scss";
 
 import React from "react";
 
-function HeroStats({ video }) {
+function HeroStats({ stats }) {
   return (
     <div className="herostats">
-      <h1 className="herostats__title">{video.title}</h1>
+      <h1 className="herostats__title">{stats.title}</h1>
       <div className="herostats__container">
         <div className="herostats__channel">
-          <p className="herostats__channel-name">Channel: {video.channel}</p>
+          <p className="herostats__channel-name">Channel: {stats.channel}</p>
           <p className="herostats__channel-date">
-            Date: {new Date(video.timestamp).toLocaleDateString()}
+            Date: {new Date(stats.timestamp).toLocaleDateString()}
           </p>
         </div>
         <div className="herostats__section">
@@ -22,7 +22,7 @@ function HeroStats({ video }) {
               alt="Views icon"
               className="herostats__section-icon"
             />
-            <p className="herostats__section-views">{video.views}</p>
+            <p className="herostats__section-views">{stats.views}</p>
           </div>
           <div className="herostats__container-likes">
             <img
@@ -30,7 +30,7 @@ function HeroStats({ video }) {
               alt="Likes icon"
               className="herostats__section-icon"
             />
-            <p className="herostats__section-likes">{video.likes}</p>
+            <p className="herostats__section-likes">{stats.likes}</p>
           </div>
         </div>
       </div>

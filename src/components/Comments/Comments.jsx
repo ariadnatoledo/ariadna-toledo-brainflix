@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./Comments.scss";
 
-function Comments({ video, onAddComment }) {
+function Comments({ user, currentUser }) {
   const [name, setName] = useState("");
   const [comment, setComment] = useState("");
 
@@ -25,7 +25,7 @@ function Comments({ video, onAddComment }) {
       timestamp: new Date().toISOString(),
     };
 
-    onAddComment(newComment);
+    currentUser(newComment);
 
     setName("");
     setComment("");
@@ -33,7 +33,7 @@ function Comments({ video, onAddComment }) {
 
   return (
     <div className="comment">
-      {video.comments.map((comment) => (
+      {user.comments.map((comment) => (
         <div key={comment.id} className="comment__wrapper">
           <div className="comment__avatar"></div>
           <div className="comment__content">

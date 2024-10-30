@@ -26,13 +26,13 @@ function App() {
   return (
     <>
       <Header logo="BrainFlix" />
-      <Hero video={currentVideo} />
+      <Hero poster={currentVideo} />
       <section className="maincontainer">
         <div>
-          <HeroStats video={currentVideo} />
-          <HeroDescription video={currentVideo} />
+          <HeroStats stats={currentVideo} />
+          <HeroDescription description={currentVideo} />
           <CommentForm onAddComment={handleAddComment} />
-          <Comments video={currentVideo} />
+          <Comments user={currentVideo} />
         </div>
         <div className="maincontainer__two">
           <VideoList
