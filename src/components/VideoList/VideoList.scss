@@ -83,6 +83,7 @@
 
 @include desktop {
   .video-list {
+    width: 50rem;
     padding: 2.25rem 14rem 0 0;
 
     &__header {
