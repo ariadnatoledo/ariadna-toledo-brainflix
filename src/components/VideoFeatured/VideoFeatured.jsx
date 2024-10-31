@@ -1,17 +1,17 @@
 import React from "react";
-import "./Hero.scss";
+import "./VideoFeatured.scss";
 
-function Hero({ poster }) {
+function VideoFeatured({ poster }) {
   if (!poster) {
-    return <div className="hero">Loading...</div>;
+    return <div className="videofeatured">Loading...</div>;
   }
 
   return (
     <div className="maincontainer">
-      <div className="hero">
-        <div className="hero__video-container">
+      <div className="videofeatured">
+        <div className="videofeatured__video-container">
           <video
-            className="hero__video"
+            className="videofeatured__video"
             src={poster.video}
             poster={poster.image}
             controls
@@ -25,4 +25,4 @@ function Hero({ poster }) {
   );
 }
 
-export default Hero;
+export default VideoFeatured;

@@ -1,7 +1,7 @@
 import { useState } from "react";
 import "./App.scss";
 import Header from "./components/Header/Header";
-import Hero from "./components/Hero/Hero";
+import VideoFeatured from "./components/VideoFeatured/VideoFeatured";
 import HeroStats from "./components/HeroStats/HeroStats";
 import HeroDescription from "./components/HeroDescription/HeroDescription";
 import CommentForm from "./components/CommentForm/CommentForm";
@@ -26,7 +26,7 @@ function App() {
   return (
     <>
       <Header logo="BrainFlix" />
-      <Hero poster={currentVideo} />
+      <VideoFeatured poster={currentVideo} />
       <section className="maincontainer">
         <div>
           <HeroStats stats={currentVideo} />
