@@ -6,7 +6,7 @@ import HeroStats from "./components/HeroStats/HeroStats";
 import HeroDescription from "./components/HeroDescription/HeroDescription";
 import CommentForm from "./components/CommentForm/CommentForm";
 import Comments from "./components/Comments/Comments";
-import VideoList from "./components/VideoList/VideoList";
+import NextVideoList from "./components/NextVideoList/NextVideoList";
 import VideoDetails from "./data/video-details.json";
 
 function App() {
@@ -35,7 +35,7 @@ function App() {
           <Comments user={currentVideo} />
         </div>
         <div className="maincontainer__two">
-          <VideoList
+          <NextVideoList
             videos={VideoDetails.filter(
               (video) => video.id !== currentVideo.id
             )}

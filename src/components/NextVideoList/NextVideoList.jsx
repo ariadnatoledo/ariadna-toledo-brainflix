@@ -1,7 +1,7 @@
 import React from "react";
-import "./VideoList.scss";
+import "./NextVideoList.scss";
 
-function VideoList({ videos, onVideoSelect }) {
+function NextVideoList({ videos, onVideoSelect }) {
   return (
     <div className="video-list">
       <div className="video-list__wrapper">
@@ -28,4 +28,4 @@ function VideoList({ videos, onVideoSelect }) {
   );
 }
 
-export default VideoList;
+export default NextVideoList;
