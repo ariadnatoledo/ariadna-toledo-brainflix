@@ -1,4 +1,3 @@
-// VideoUploadPage.jsx
 import React from 'react';
 import './VideoUploadPage.scss';
 
