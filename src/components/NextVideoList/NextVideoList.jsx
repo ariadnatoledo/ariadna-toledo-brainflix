@@ -31,4 +31,3 @@ function NextVideoList({ videos, onVideoSelect }) {
 }
 
 export default NextVideoList;
-

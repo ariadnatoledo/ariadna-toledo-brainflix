@@ -1,11 +1,11 @@
-import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { useState } from "react";
 import "./App.scss";
 import Header from "./components/Header/Header";
 import VideoDetailsPage from "./pages/VideoDetailsPage/VideoDetailsPage";
 import VideoUploadPage from "./pages/VideoUploadPage/VideoUploadPage";
 import HomePage from "./pages/HomePage/HomePage"; 
-import VideoDetailsData from "./data/video-details.json";
+import VideoDetailsData from "./data/video-details.json"; // Assuming this is your video data
 import BrainFlixLogo from "./assets/logo/BrainFlix-logo.svg";
 
 function App() {
@@ -38,7 +38,7 @@ function App() {
         />
         <Route 
           path="/video/:id" 
-          element={<VideoDetailsPage />} 
+          element={<VideoDetailsPage videos={VideoDetailsData} />} // Pass videos to VideoDetailsPage
         />
         <Route 
           path="/upload" 
@@ -53,3 +53,5 @@ export default App;
 
 
 
+
+// I need to figure it out how to take out my JSON FILE and ust retrieve from my API KEY and BASE URL

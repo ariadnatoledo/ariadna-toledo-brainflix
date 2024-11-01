@@ -1,12 +1,12 @@
 import React from "react";
-import { Link } from "react-router-dom"; // Import Link for routing
+import { Link } from "react-router-dom"; 
 import "./Header.scss";
 import avatarSvg from "../../assets/images/Mohan-muruge.jpg";
 
 function Header({ logo }) {
   return (
     <header className="header">
-      <Link to="/"> {/* Make the logo clickable */}
+      <Link to="/"> 
         <img src={logo} alt="BrainFlix Logo" className="header__sitelogo" />
       </Link>
       <div className="header__nav">
@@ -28,7 +28,7 @@ function Header({ logo }) {
           </div>
         </div>
         <div className="header__upload">
-          <Link to="/upload"> {/* Wrap the button in a Link */}
+          <Link to="/upload"> 
             <button className="header__upload-btn" type="button" name="Upload">
               UPLOAD
             </button>
@@ -47,7 +47,6 @@ function Header({ logo }) {
 }
 
 export default Header;
-
 
 
 // import React from "react";

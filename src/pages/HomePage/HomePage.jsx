@@ -30,4 +30,3 @@ function HomePage({ currentVideo, handleAddComment, handleVideoSelect }) {
 }
 
 export default HomePage;
-
