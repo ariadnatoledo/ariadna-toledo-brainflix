@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./NextVideoList.scss";
 
 function NextVideoList({ videos, onVideoSelect }) {
@@ -8,10 +9,11 @@ function NextVideoList({ videos, onVideoSelect }) {
         <h2 className="video-list__header">NEXT VIDEOS</h2>
       </div>
       {videos.map((video) => (
-        <div
-          key={video.id}
-          className="video-list__item"
-          onClick={() => onVideoSelect(video)}
+        <Link 
+          key={video.id} 
+          to={`/video/${video.id}`} 
+          className="video-list__item" 
+          onClick={() => onVideoSelect(video)} 
         >
           <img
             className="video-list__image"
@@ -22,10 +24,11 @@ function NextVideoList({ videos, onVideoSelect }) {
             <h3 className="video-list__title">{video.title}</h3>
             <p className="video-list__channel">{video.channel}</p>
           </div>
-        </div>
+        </Link>
       ))}
     </div>
   );
 }
 
 export default NextVideoList;
+
