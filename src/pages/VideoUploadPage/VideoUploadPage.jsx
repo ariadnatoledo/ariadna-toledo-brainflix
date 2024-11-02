@@ -1,6 +1,6 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import './VideoUploadPage.scss';
+// import './VideoUploadPage.scss';
 
 function VideoUploadPage() {
   const navigate = useNavigate();

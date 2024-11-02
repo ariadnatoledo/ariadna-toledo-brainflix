@@ -1,33 +1,30 @@
-import React from "react";
-import { Link } from "react-router-dom";
-import "./NextVideoList.scss";
+import React from 'react';
+import { Link } from 'react-router-dom';
+import "../NextVideoList/NextVideoList.scss";
 
-function NextVideoList({ videos, onVideoSelect }) {
+function NextVideosList({ list }) {
   return (
-    <div className="video-list">
-      <div className="video-list__wrapper">
-        <h2 className="video-list__header">NEXT VIDEOS</h2>
+    <div>
+      <h2>NEXT VIDEOS</h2>
+      <div className="videolist">
+        {list.map((video) => (
+          <Link to={`/videos/${video.id}`} key={video.id} className="videolist__item-link">
+            <div className="videolist__item">
+              <img 
+                src={video.image} 
+                alt={video.title} 
+                className="videolist__image" 
+              />
+              <div className="videolist__details">
+                <h3 className="videolist__title">{video.title}</h3>
+                <p className="videolist__channel">{video.channel}</p>
+              </div>
+            </div>
+          </Link>
+        ))}
       </div>
-      {videos.map((video) => (
-        <Link 
-          key={video.id} 
-          to={`/video/${video.id}`} 
-          className="video-list__item" 
-          onClick={() => onVideoSelect(video)} 
-        >
-          <img
-            className="video-list__image"
-            src={video.image}
-            alt={video.title}
-          />
-          <div className="video-list__details">
-            <h3 className="video-list__title">{video.title}</h3>
-            <p className="video-list__channel">{video.channel}</p>
-          </div>
-        </Link>
-      ))}
     </div>
   );
 }
 
-export default NextVideoList;
+export default NextVideosList;

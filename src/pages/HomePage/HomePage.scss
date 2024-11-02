@@ -1,16 +1,16 @@
-// @import "../../components/VideoFeatured/VideoFeatured.scss";
-// @import "../../components//VideoDetails/VideoDetails.scss";
-// @import "../../components/CommentForm/CommentForm.scss";
-// @import "../../components/Comments/Comments.scss";
-// @import "../../components/NextVideoList/NextVideoList.scss";
+@import "../../components/VideoFeatured/VideoFeatured.scss";
+@import "../../components//VideoDetails/VideoDetails.scss";
+@import "../../components/CommentForm/CommentForm.scss";
+@import "../../components/Comments/Comments.scss";
+@import "../../components/NextVideoList/NextVideoList.scss";
 
-// // HomePage-specific styles
-// .maincontainer {
-//   display: flex;
-//   gap: 1rem;
-//   padding: 1rem;
-// }
+// HomePage-specific styles
+.maincontainer {
+  display: flex;
+  gap: 1rem;
+  padding: 1rem;
+}
 
-// .maincontainer__two {
-//   flex: 1;
-// }
+.maincontainer__two {
+  flex: 1;
+}

@@ -3,7 +3,7 @@
 @import "../../styles/partials/typography";
 @import "../../styles/partials/global";
 
-.video-list {
+.videolist {
   font-family: "avenir-regular";
   margin-right: 1rem;
   margin-left: 1rem;
@@ -53,7 +53,7 @@
 }
 
 @include tablet {
-  .video-list {
+  .videolist {
     margin-right: 1.5rem;
     margin-left: 1.5rem;
 
@@ -82,7 +82,7 @@
 }
 
 @include desktop {
-  .video-list {
+  .videolist {
     width: 40vw;
     padding: 2.25rem 14rem 0 0;
 

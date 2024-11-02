@@ -1,23 +1,20 @@
-import React from "react";
-import "./VideoDetails.scss";
+import React from 'react';
 
-function VideoDetails({ video }) {
-  console.log("Video Details:", video); 
-
-  if (!video) {
-    return <div>Video not found!</div>; 
-  }
-
+function VideoDetails({ videoDetails }) {
   return (
-    <div className="video-details">
-            {/* <img className="video-details__image" src={video.image} alt={video.title} />  */}
-      <h1 className="video-details__title">{video.title}</h1>
-      <p className="video-details__author">By {video.channel}</p>
-      <p className="video-details__views">{video.views} views</p>
-      <p className="video-details__likes">{video.likes} likes</p>
-      <p className="video-details__description">{video.description}</p>
-      <h3>{video.comments.length} Comments</h3> {/* Display comment count here */}
-    </div>
+    <>
+      {/* Video Details */}
+      {videoDetails.title && (
+        <div>
+          <h2>{videoDetails.title}</h2>
+          <p><strong>Channel:</strong> {videoDetails.channel}</p>
+          <p><strong>Date:</strong> {videoDetails.date ? new Date(videoDetails.date).toLocaleDateString() : 'No Date Available'}</p>
+          <p><strong>Views:</strong> {videoDetails.views}</p>
+          <p><strong>Likes:</strong> {videoDetails.likes}</p>
+          <p><strong>Description:</strong> {videoDetails.description}</p>
+        </div>
+      )}
+    </>
   );
 }
 

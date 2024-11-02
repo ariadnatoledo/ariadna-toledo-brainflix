@@ -1,56 +1,22 @@
-import React, { useState } from "react";
-import "./Comments.scss";
+import React from 'react';
+import "../Comments/Comments.scss"
 
-function Comments({ user, currentUser }) {
-  const [name, setName] = useState("");
-  const [comment, setComment] = useState("");
-
-  const handleSubmit = (event) => {
-    event.preventDefault();
-
-    if (name.trim() === "") {
-      alert("Please enter your name.");
-      return;
-    }
-
-    if (comment.trim() === "") {
-      alert("Please leave a cool comment!");
-      return;
-    }
-
-    const newComment = {
-      id: Date.now(),
-      name: name.trim(),
-      comment: comment.trim(),
-      timestamp: new Date().toISOString(),
-    };
-
-    currentUser(newComment);
-
-    setName("");
-    setComment("");
-  };
+function Comments({ comments }) {
+  if (!comments || comments.length === 0) {
+    return <p>No comments available.</p>;
+  }
 
   return (
-    <div className="comment">
-      {user.comments.map((comment) => (
-        <div key={comment.id} className="comment__wrapper">
-          <div className="comment__avatar"></div>
-          <div className="comment__content">
-            <div className="comment__header">
-              <div className="comment__name-container">
-                <p className="comment__name">{comment.name}</p>
-              </div>
-              <div className="comment__timestamp-container">
-                <p className="comment__timestamp">
-                  {new Date(comment.timestamp).toLocaleDateString()}
-                </p>
-              </div>
-            </div>
-            <p className="comment__text">{comment.comment}</p>
-          </div>
-        </div>
-      ))}
+    <div>
+      <h3>{comments.length} Comments</h3>
+      <ul>
+        {comments.map((comment) => (
+          <li key={comment.timestamp} style={{ marginBottom: '1rem' }}>
+            <p><strong>{comment.name}</strong> - {comment.timestamp ? new Date(comment.timestamp).toLocaleDateString() : 'No Date'}</p>
+            <p>{comment.comment}</p>
+          </li>
+        ))}
+      </ul>
     </div>
   );
 }
