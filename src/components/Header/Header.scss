@@ -62,13 +62,14 @@
   }
 
   &__upload {
-    display: flex;
-    justify-content: center;
-    align-self: center;
+    // display: flex;
+    // justify-content: center;
+    // align-self: center;
+    // box-sizing: border-box;
     width: 100%;
-    box-sizing: border-box;
 
     &-btn {
+      width: 100%;
       background-image: url("../../assets/icons/upload.svg");
       background-position: 0.625rem 0.625rem;
       background-repeat: no-repeat;
@@ -81,7 +82,7 @@
       border-radius: 0.25rem;
       border: none;
       font-size: 0.8125rem;
-      width: 100%;
+      // width: 100%;
 
       &:focus {
         outline-width: 0;
@@ -146,6 +147,7 @@
     }
 
     &__upload {
+      display: flex;
       width: 16rem;
       gap: 1.5rem;
     }

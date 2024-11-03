@@ -23,7 +23,7 @@ function Header() {
             </div>
             <div className="header__avatar header__avatar-mobile">
               <img
-                src="#"
+                src={avatarSvg}
                 alt="User Avatar"
                 className="header__avatar-photo"
               />

@@ -65,8 +65,6 @@ function HomePage() {
 
   return (
     <section>
-      <h1>HomePage</h1>
-
       <VideoFeatured poster={videoDetails} />
 
       <section className="maincontainer">
