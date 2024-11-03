@@ -1,0 +1,151 @@
+@import "../../styles/partials/variables";
+@import "../../styles/partials/mixins";
+@import "../../styles/partials/typography";
+@import "../../styles/partials/global";
+
+.upload-page {
+  width: 100%;
+  
+  &__heading {
+    font-family: "avenir-demi";
+    font-size: 1.25rem; 
+    color: $color-silver;
+    padding: 1rem 0;
+  }
+
+  &__thumbnail-heading {
+    margin-top: 2rem; // Space above the heading
+    font-size: 1.5rem; // Adjust size as needed
+    padding-bottom: 0.75rem;
+
+  }
+
+  &__thumbnail-container {
+    margin: 1rem 0; // Space around the thumbnail
+    display: flex;
+    justify-content: center; // Center the thumbnail image
+    align-items: center;
+    width: 100%; // Full width
+    height: 10rem; // Set a height for the thumbnail area
+    border: 1px dashed #ccc; // Dashed border for visual indication
+    border-radius: 0.25rem; // Slightly rounded corners
+  }
+
+  &__thumbnail-image {
+    width: 100%; // Ensure the image takes the full width of the container
+    max-height: 100%; // Prevent overflow
+    object-fit: cover; // Cover the container without distortion
+    padding: 0 16px 16px 16px;
+  }
+
+  &__form-container {
+    display: flex;
+    flex-direction: column;
+    padding: 0 1rem;
+    box-sizing: border-box;
+    width: 100%;
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    border-bottom: 0.0625rem solid $color-mercury;
+    font-family: "avenir-regular";
+    width: 100%;
+  }
+
+  &__label {
+    margin-bottom: 0.5rem; 
+  }
+
+  &__input,
+  &__textarea,
+  &__file-input {
+    width: 100%;
+    background-color: $color-alabaster;
+    border-radius: 0.25rem;
+    border: 0.0625rem solid $color-mercury;
+    font-family: "avenir-regular";
+    font-size: 0.8125rem;
+    line-height: 1.125rem;
+    margin-bottom: 1rem;
+    padding: 0.75rem;
+    transition: border-color 0.3s ease;
+
+    &:focus {
+      border: 0.125rem solid $color-brainflix-blue;
+      outline: none;
+    }
+
+    &.error {
+      border: 0.0625rem solid #d22d2d;
+    }
+  }
+
+  &__textarea {
+    height: 6.25rem;
+    resize: vertical;
+  }
+
+  &__submit {
+    background-image: url("../../assets/icons/publish.svg");
+    background-position: 0.625rem 0.625rem;
+    background-repeat: no-repeat;
+    padding: 0.75rem 1.25rem 0.75rem 2.5rem;
+    margin-bottom: 1rem;
+    background-color: $color-brainflix-blue;
+    color: $color-white;
+    font-family: "avenir-demi";
+    height: 2.5rem;
+    border-radius: 0.25rem;
+    border: none;
+    font-size: 0.8125rem;
+
+    &:focus {
+      outline-width: 0;
+    }
+
+    &:hover {
+      background-color: $color-brainflix-darkblue;
+    }
+  }
+
+  &__cancel {
+    background-color: $color-white;
+    color: $color-brainflix-blue;
+    font-family: "avenir-demi";
+    height: 2.5rem;
+    border-radius: 0.25rem;
+    border: none;
+    font-size: 0.8125rem;
+
+    &:hover {
+      background-color: $color-alabaster;
+    }
+  }
+}
+
+@include tablet {
+  .upload-page {
+    &__heading {
+      font-size: 1rem; 
+    }
+    
+    &__input,
+    &__textarea {
+      margin-bottom: 1.5rem;
+    }
+
+    &__submit {
+      width: 30rem; 
+    }
+  }
+}
+
+@include desktop {
+  .upload-page {
+    &__form-container {
+      padding: 0 10rem; 
+    }
+  }
+}
