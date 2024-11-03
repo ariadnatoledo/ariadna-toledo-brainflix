@@ -65,7 +65,7 @@ function HomePage() {
 
   return (
     <section>
-      <VideoFeatured poster={videoDetails} />
+    <VideoFeatured poster={videoDetails} source={`${videoDetails.video}?api_key=${API_KEY}`} />
 
       <section className="maincontainer">
         <div>

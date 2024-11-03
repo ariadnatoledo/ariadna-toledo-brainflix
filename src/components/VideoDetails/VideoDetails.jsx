@@ -39,6 +39,7 @@ function VideoDetails({ videoDetails }) {
           
           <div className="videodetails__description">
             <p className="videodetails__description-text"> {videoDetails.description}</p>
+         
           </div>
         </div>
       )}

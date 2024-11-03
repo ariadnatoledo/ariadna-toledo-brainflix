@@ -1,10 +1,11 @@
 import React from "react";
 import "./VideoFeatured.scss";
 
-function VideoFeatured({ poster }) {
-  console.log("Poster data in VideoFeatured:", poster); 
+function VideoFeatured({ poster, source }) {
+  console.log("Poster data in VideoFeatured:", poster);
+  console.log("Video source in VideoFeatured:", source); // Add this to see the source in the console
 
-  if (!poster) {
+  if (!poster || !poster.video) {
     return <div className="videofeatured">Loading...</div>;
   }
 
@@ -14,11 +15,11 @@ function VideoFeatured({ poster }) {
         <div className="videofeatured__video-container">
           <video
             className="videofeatured__video"
-            src={poster.video}
             poster={poster.image}
             controls
             playsInline
           >
+            <source src={source} type="video/mp4" />
             Your browser does not support the video tag.
           </video>
         </div>
@@ -28,3 +29,4 @@ function VideoFeatured({ poster }) {
 }
 
 export default VideoFeatured;
+
