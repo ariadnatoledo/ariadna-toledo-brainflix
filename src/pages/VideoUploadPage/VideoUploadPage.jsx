@@ -40,6 +40,7 @@ function VideoUploadPage() {
     <div className="upload-page">
       <h1 className="upload-page__heading">Upload Video</h1>
 
+
       <div className="upload-page__thumbnail">
         <h2 className="upload-page__thumbnail-heading">VIDEO THUMBNAIL</h2>
         <img
@@ -51,6 +52,7 @@ function VideoUploadPage() {
 
       <div className="upload-page__form-container">
         <form className="upload-page__form" onSubmit={handleFormSubmit}>
+          <div className="upload-page__form-section">
           <label className="upload-page__label" htmlFor="videoTitle">
             TITLE YOUR VIDEO
           </label>
@@ -73,6 +75,9 @@ function VideoUploadPage() {
             required
             onChange={handleInputChange}
           />
+          </div>
+
+          
           <div className="upload-page__button-container">
             <button className="upload-page__submit" type="submit">
               PUBLISH

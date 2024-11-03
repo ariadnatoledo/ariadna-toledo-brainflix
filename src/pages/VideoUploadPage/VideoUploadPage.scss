@@ -185,6 +185,7 @@
       font-family: "avenir-demi";
       font-size: 14px;
       padding-top: 24px;
+      padding-left: 0px;
       padding-bottom: 0.75rem;
       border-top: 1px solid $color-mercury;
 
@@ -216,8 +217,21 @@
 
 @include desktop {
   .upload-page {
+    &__thumbnail {
+        display: flex;
+flex-direction: column;
+        padding: 36px 160px 24px 160px;
+    }
+    &__heading {
+        padding: 36px 160px 24px 160px;
+    }
     &__form-container {
       padding: 0 10rem;
     }
+    
+    &__thumbnail-heading {
+    padding-left: 0px;   
+    }
+   
   }
 }
