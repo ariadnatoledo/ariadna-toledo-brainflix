@@ -15,6 +15,7 @@
     font-family: avenir-bold;
     border-bottom: 1px solid $color-mercury;
     padding-bottom: 1rem;
+    color: $color-brainflix-black;
   }
 
   &__container {
@@ -157,9 +158,3 @@
     }
   }
 
-
-  // TO CHANGE AKK VIDEODETAILS to be in line with the VideoDetails.jsx.
-  
-  .video-details__image {
-    width: 100%;
-  }
