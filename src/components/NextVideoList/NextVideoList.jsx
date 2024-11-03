@@ -5,8 +5,8 @@ import "../NextVideoList/NextVideoList.scss";
 function NextVideosList({ list }) {
   return (
     <div>
-      <h2>NEXT VIDEOS</h2>
-      <div className="videolist">
+        <h2 className="videolist__header">NEXT VIDEOS</h2>
+        <div className="videolist">
         {list.map((video) => (
           <Link to={`/videos/${video.id}`} key={video.id} className="videolist__item-link">
             <div className="videolist__item">
