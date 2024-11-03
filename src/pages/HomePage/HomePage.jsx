@@ -69,8 +69,8 @@ function HomePage() {
 
       <section className="maincontainer">
         <div>
-          <VideoDetails videoDetails={videoDetails} />
-          <CommentForm onAddComment={handleAddComment} />
+        <VideoDetails videoDetails={videoDetails} comments={videoDetails.comments} />
+        <CommentForm onAddComment={handleAddComment} />
           <Comments comments={videoDetails.comments} />
         </div>
 

@@ -8,7 +8,6 @@ function Comments({ comments }) {
 
   return (
     <div>
-      <h3>{comments.length} Comments</h3>
       <ul>
         {comments.map((comment) => (
           <li key={comment.timestamp} style={{ marginBottom: '1rem' }}>
