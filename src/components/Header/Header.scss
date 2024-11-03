@@ -47,7 +47,7 @@
       width: 100%;
       background-color: #fafafa;
       border-radius: 0.25rem;
-      border: 0.09375rem solid #e1e1e1;
+      border: 0.09375rem solid $color-mercury;
       background-image: url("../../assets/icons/search.svg");
       background-position: 0.625rem 0.625rem;
       background-repeat: no-repeat;
@@ -62,10 +62,6 @@
   }
 
   &__upload {
-    // display: flex;
-    // justify-content: center;
-    // align-self: center;
-    // box-sizing: border-box;
     width: 100%;
 
     &-btn {
@@ -74,7 +70,8 @@
       background-position: 0.625rem 0.625rem;
       background-repeat: no-repeat;
       padding: 0.75rem 1.25rem 0.75rem 2.5rem;
-      width: 100%;
+      // width: 100%;
+      // width: 11rem;
       background-color: $color-brainflix-blue;
       color: $color-white;
       font-family: "avenir-demi";
@@ -148,8 +145,11 @@
 
     &__upload {
       display: flex;
-      width: 16rem;
+      width: 15rem;
       gap: 1.5rem;
+      &-btn {
+      width: 11rem;
+      }
     }
 
     &__avatar {
