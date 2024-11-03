@@ -3,7 +3,7 @@ import "./VideoFeatured.scss";
 
 function VideoFeatured({ poster, source }) {
   console.log("Poster data in VideoFeatured:", poster);
-  console.log("Video source in VideoFeatured:", source); // Add this to see the source in the console
+  console.log("Video source in VideoFeatured:", source); 
 
   if (!poster || !poster.video) {
     return <div className="videofeatured">Loading...</div>;
