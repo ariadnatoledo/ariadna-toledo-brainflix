@@ -49,7 +49,7 @@ function HomePage() {
   const handleAddComment = (newComment) => {
     setVideoDetails((prevDetails) => ({
       ...prevDetails,
-      comments: [...prevDetails.comments, newComment],
+      comments: [newComment, ...prevDetails.comments],
     }));
   };
 

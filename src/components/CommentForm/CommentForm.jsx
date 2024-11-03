@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import avatarSvg from "../../assets/images/Mohan-muruge.jpg";
-import "./CommentForm.scss";
+import "../CommentForm/CommentForm.scss";
 
 function CommentForm({ onAddComment }) {
   const [name, setName] = useState("");
