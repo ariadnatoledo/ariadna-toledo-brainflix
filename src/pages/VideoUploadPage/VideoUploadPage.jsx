@@ -37,10 +37,8 @@ function VideoUploadPage() {
     <div className="upload-page">
       <h1 className="upload-page__heading">Upload Video</h1>
 
-      {/* Outer container with padding */}
       <div className="upload-page__outer-container">
         <div className="upload-page__content">
-          {/* Thumbnail Section */}
           <div className="upload-page__thumbnail">
             <h2 className="upload-page__thumbnail-heading">VIDEO THUMBNAIL</h2>
             <img
@@ -50,7 +48,6 @@ function VideoUploadPage() {
             />
           </div>
 
-          {/* Form Section */}
           <div className="upload-page__form-container">
             <form className="upload-page__form" onSubmit={handleFormSubmit}>
               <div className="upload-page__form-section">
@@ -78,7 +75,6 @@ function VideoUploadPage() {
                 />
               </div>
 
-              {/* Button Section inside the form */}
               <div className="upload-page__button-container">
                 <button className="upload-page__submit" type="submit">
                   PUBLISH
