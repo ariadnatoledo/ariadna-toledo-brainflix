@@ -11,15 +11,15 @@
     line-height: 2rem;
     font-family: avenir-bold;
     border-top: 1px solid $color-mercury;
-    padding: 24px 24px 0 16px;
+    padding: 1.5rem 1.5rem 0 1rem;
   }
 
   &__thumbnail-heading {
     display: flex;
     font-family: "avenir-demi";
-    font-size: 13px;
-    padding-top: 24px;
-    padding-left: 16px;
+    font-size: 0.8125rem;
+    padding-top: 1.5rem;
+    padding-left: 1rem;
     padding-bottom: 0.75rem;
   }
 
@@ -38,13 +38,13 @@
   &__thumbnail-image {
     width: 100%;
     object-fit: cover;
-    padding: 0 16px 24px 16px;
+    padding: 0 1rem 1.5rem 1rem;
   }
 
   &__form-container {
     display: flex;
     flex-direction: column;
-    padding: 0 16px;
+    padding: 0 1rem;
     box-sizing: border-box;
     width: 100%;
   }
@@ -56,10 +56,14 @@
     width: 100%;
   }
 
+  &__form-section {
+    // border-bottom: 1px solid $color-mercury;
+  }
+
   &__label {
     display: flex;
     font-family: "avenir-demi";
-    font-size: 13px;
+    font-size: 0.8125rem;
     padding-bottom: 0.75rem;
     color: $color-silver;
   }
@@ -73,8 +77,8 @@
     border: 0.0625rem solid $color-mercury;
     font-family: "avenir-regular";
     font-size: 0.8125rem;
-    line-height: 1.125rem;
-    margin-bottom: 24px;
+    line-height: 0.703125rem;
+    margin-bottom: 1.5rem;
     padding: 0.75rem;
     transition: border-color 0.3s ease;
 
@@ -123,34 +127,33 @@
     height: 2.5rem;
     border-radius: 0.25rem;
     border: none;
-    font-size: 0.8125rem;
-    padding-left: 20px;
-
+        font-size: 0.8125rem;
+    padding-left: 1.25rem;
 
     &:hover {
       background-color: $color-alabaster;
     }
   }
+
   &__button-container {
     display: flex;
     flex-direction: column;
-    border-top: 1px solid $color-mercury;
-    padding-top: 24px;
+    padding: 0;
   }
 }
 
 @include tablet {
   .upload-page {
     &__heading {
-      font-size: 33px;
-      line-height: 44px;
-      padding: 36px 36px 24px 24px;
+      font-size: 2.0625rem;
+      line-height: 2.75rem;
+      padding: 2.25rem 2.25rem 1.5rem 1.5rem;
     }
 
     &__form-container {
       display: flex;
       flex-direction: column;
-      padding: 0 24px;
+      padding: 0 1.5rem;
       box-sizing: border-box;
       width: 100%;
     }
@@ -161,77 +164,121 @@
     }
 
     &__submit {
-        width: 11rem;
+      width: 11rem;
     }
 
     &__cancel {
-        width: 15rem;
-
+      width: 15rem;
     }
 
     &__thumbnail {
-        padding-left: 24px;
-        padding-right: 24px;
+      padding-left: 1.5rem;
+      padding-right: 1.5rem;
     }
+
     &__thumbnail-image {
       width: 50%;
-      max-width: 50%; // Prevent image from expanding further than 50%
-      padding: 0 24px 36px 0;
+      max-width: 50%; 
+      padding: 0 1.5rem 1.5rem 0;
       object-fit: cover;
     }
 
     &__thumbnail-heading {
       display: flex;
       font-family: "avenir-demi";
-      font-size: 14px;
-      padding-top: 24px;
+      font-size: 0.875rem;
+      padding-top: 1.5rem;
       padding-left: 0px;
       padding-bottom: 0.75rem;
       border-top: 1px solid $color-mercury;
-
     }
 
     &__label {
       display: flex;
       font-family: "avenir-demi";
-      font-size: 14px;
+      font-size: 0.875rem;
       padding-bottom: 0.75rem;
       color: $color-silver;
     }
 
     &__textarea {
       margin-bottom: 1.5rem;
-      padding-bottom: 0.75rem;
+      padding-bottom: 0.1875rem;
     }
 
     &__button-container {
-        display: flex;
-        flex-direction: row-reverse;
-        gap: 24px;
-        border-top: 1px solid $color-mercury;
-        padding-top: 24px;
-        align-items: flex-start;
+      display: flex;
+      flex-direction: row-reverse;
+      gap: 1.5rem;
+      padding-top: 1.5rem;
+      align-items: flex-start;
+      border-top: 1px solid $color-mercury;
     }
   }
 }
 
 @include desktop {
   .upload-page {
-    &__thumbnail {
-        display: flex;
-flex-direction: column;
-        padding: 36px 160px 24px 160px;
-    }
     &__heading {
-        padding: 36px 160px 24px 160px;
+      padding: 2.25rem 10rem 2.25rem;
     }
-    &__form-container {
-      padding: 0 10rem;
+
+    &__outer-container {
+      padding-left: 10rem;
+      padding-right: 10rem;
+      width: 100%;
+      box-sizing: border-box;
     }
-    
+
+    &__content {
+      display: flex;
+      align-items: baseline;
+      width: 100%;
+      justify-content: space-between; 
+      border-top: 1px solid $color-mercury;
+    }
+
+    &__thumbnail {
+      display: flex;
+      flex-direction: column;
+      padding: 0;
+      max-width: 100%; 
+    }
+
     &__thumbnail-heading {
-    padding-left: 0px;   
+      padding-left: 0;
+      border: none;
     }
-   
+
+    &__thumbnail-image {
+      width: 100%; 
+      max-width: 25rem; 
+      height: auto;
+      padding: 0 1.5rem 2.25rem 0;
+      object-fit: cover;
+    }
+
+    &__form-container {
+      padding: 0;
+      flex: 1; 
+      max-width: 100%; 
+    }
+
+    &__form-section {
+      width: 100%; 
+      border: none;
+    }
+
+    &__label {
+      font-family: "avenir-demi";
+      font-size: 0.875rem;
+      color: $color-silver;
+    }
+
+    &__button-container {
+      display: flex;
+      gap: 1rem;
+      padding: 1.5rem 0;
+    }
   }
 }

@@ -62,12 +62,14 @@
 @include tablet {
   .comment {
     padding: 0 1.5rem;
+
     &__wrapper {
       padding: 1.5rem 0;
     }
+
     &__name {
       font-size: 0.875rem;
-      height: 1.375rem;
+      line-height: 1.375rem;
       font-family: avenir-bold;
     }
 
@@ -79,6 +81,7 @@
 
     &__text {
       font-size: 0.875rem;
+      line-height: 1.375rem;
       font-family: avenir-regular;
     }
   }
@@ -88,6 +91,7 @@
   .comment {
     padding: 0 0 2.25rem 10rem;
     margin-right: 2.25rem;
+
     &__content {
       margin: 0 1.5rem 0 0;
     }
