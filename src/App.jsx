@@ -9,10 +9,11 @@ function App() {
     <BrowserRouter>
       <Header />
       <Routes>
-        {/* <Route path="*" element={<NotFoundPage /> }/> */}
         <Route path="/" element={<HomePage />} />
-        <Route path="/videos/:id" element={<HomePage />} />
+        <Route path="/videos" element={<HomePage />} />
+        <Route path="/videos/:id" element={<HomePage />} />{" "}
         <Route path="/upload" element={<VideoUploadPage />} />
+        <Route path="*" element={<Navigate to="/" />} />
       </Routes>
     </BrowserRouter>
   );

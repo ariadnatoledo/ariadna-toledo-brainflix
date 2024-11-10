@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import videoThumbnail from "../../assets/images/Upload-video-preview.jpg";
-import "../VideoUploadPage/VideoUploadPage.scss";
+import "./VideoUploadPage.scss";
 
 function VideoUploadPage() {
   const navigate = useNavigate();

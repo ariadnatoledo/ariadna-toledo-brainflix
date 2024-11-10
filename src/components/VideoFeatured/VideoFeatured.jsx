@@ -2,8 +2,8 @@ import React from "react";
 import "./VideoFeatured.scss";
 
 function VideoFeatured({ poster, source }) {
-  console.log("Poster data in VideoFeatured:", poster);
-  console.log("Video source in VideoFeatured:", source); 
+  // console.log("Poster data in VideoFeatured:", poster);
+  // console.log("Video source in VideoFeatured:", source); 
 
   if (!poster || !poster.video) {
     return <div className="videofeatured">Loading...</div>;

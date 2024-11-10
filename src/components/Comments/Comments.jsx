@@ -1,5 +1,5 @@
 import React from 'react';
-import "../Comments/Comments.scss";
+import "./Comments.scss";
 
 function Comments({ comments }) {
   if (!comments || comments.length === 0) {
