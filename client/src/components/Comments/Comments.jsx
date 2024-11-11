@@ -10,7 +10,10 @@ function Comments({ comments }) {
     <div className="comment">
       <ul>
         {comments.map((comment) => (
-          <li key={comment.timestamp} className="comment__wrapper">
+          <li 
+            key={`${comment.timestamp}-${comment.name}`} 
+            className="comment__wrapper"
+          >
             <div className="comment__avatar" />
             <div className="comment__content">
               <div className="comment__header">
