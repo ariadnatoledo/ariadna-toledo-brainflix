@@ -2,10 +2,7 @@ import React from "react";
 import "./VideoFeatured.scss";
 
 function VideoFeatured({ poster, source }) {
-  // console.log("Poster data in VideoFeatured:", poster);
-  // console.log("Video source in VideoFeatured:", source); 
-
-  if (!poster || !poster.video) {
+  if (!poster || !source) {
     return <div className="videofeatured">Loading...</div>;
   }
 
@@ -15,7 +12,7 @@ function VideoFeatured({ poster, source }) {
         <div className="videofeatured__video-container">
           <video
             className="videofeatured__video"
-            poster={poster.image}
+            poster={poster} 
             controls
             playsInline
           >
@@ -29,4 +26,6 @@ function VideoFeatured({ poster, source }) {
 }
 
 export default VideoFeatured;
+
+
 

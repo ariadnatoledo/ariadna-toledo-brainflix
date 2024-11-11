@@ -76,7 +76,6 @@ function VideoUploadPage() {
       alert("An error occurred while uploading the video");
     }
   };
-  
 
   return (
     <div className="upload-page">
@@ -104,6 +103,7 @@ function VideoUploadPage() {
                   type="text"
                   id="videoTitle"
                   placeholder="Add a title to your video"
+                  value={videoData.title}
                   required
                   onChange={handleInputChange}
                 />
@@ -115,6 +115,7 @@ function VideoUploadPage() {
                   className="upload-page__textarea"
                   id="videoDescription"
                   placeholder="Add a description to your video"
+                  value={videoData.description}
                   required
                   onChange={handleInputChange}
                 />
@@ -141,6 +142,5 @@ function VideoUploadPage() {
 }
 
 export default VideoUploadPage;
-
 
 

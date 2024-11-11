@@ -16,7 +16,7 @@ function HomePage() {
   const { id } = useParams();
 
   console.log("Base URL:", base_URL);
-  // Fetch all videos
+
   const getVideosData = async () => {
     try {
       const response = await axios.get(`${base_URL}`);
@@ -58,7 +58,8 @@ function HomePage() {
   }, [id, videos]);
 
   const handleVideoClick = (video) => {
-    getVideoById(video.id); 
+    getVideoById(video.id);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
   const handleAddComment = (newComment) => {
@@ -80,7 +81,7 @@ function HomePage() {
     <section>
       {videoDetails && (
         <>
-          <VideoFeatured poster={videoDetails} source={videoDetails.video} />
+          <VideoFeatured poster={videoDetails.image} source={videoDetails.video} />
           <section className="maincontainer">
             <div>
               <VideoDetails videoDetails={videoDetails} comments={videoDetails.comments} />
